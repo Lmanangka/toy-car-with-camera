@@ -1,1 +1,3 @@
-toy car with camera raspberry pi and laptop
+Toy Car with Camera
+
+This project use Raspberry pi, arduino and computer
