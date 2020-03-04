@@ -1,3 +1,4 @@
 Toy Car with Camera
 
-This project use Raspberry pi, arduino and computer
+This project used Computer/Laptop with WiFi connection, Raspberry Pi
+and Arduino nano
