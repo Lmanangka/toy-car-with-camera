@@ -1,15 +1,20 @@
-import struct
-import io
 import socket
 import pygame
+import threading
+import io
+import struct
+import cv2
+import numpy as np
+import sys
 from PIL import Image
 
 class Remote(object):
-    def __init__(self, ip, port):
-        self.client = socket.socket()
-        self.client.connect(('ip', port))
-        self.addr = self.client.accept()[0]
-        self.connection = self.client.makefile('rb')
+    def __init__(self):
+        self.server = socket.socket()
+        self.server.bind(('0.0.0.0', 1234))
+        self.server.listen(0)
+        self.com, self.addr = self.server.accept()
+        self.connection = self.com.makefile('rb')
         print("connected to ", self.addr)
 
         pygame.init()
@@ -17,24 +22,28 @@ class Remote(object):
 
     def Vision(self):
         while True:
-            image_len = struct.unpack('<L', self.connection(struct.calcsize('<L')))[0]
-
-            if not image_len:
+            im = struct.unpack('<L', self.connection.read(struct.calcsize('<L')))[0]
+            if not im:
                 break
 
             stream = io.BytesIO()
-            stream.write(self.connection.read(image_len))
+            stream.write(self.connection.read(im))
             stream.seek(0)
             image = Image.open(stream)
-            image.verify()
 
-    def KeyboardControl(self):
+            vid = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
+            cv2.imshow('eye', vid)
+
+            if cv2.waitKey(1) & 0xFF == ord('x'):
+                break
+
+    def Drive(self):
         try:
             trig = True
             while trig:
                 for event in pygame.event.get():
                     if event.type == pygame.KEYDOWN:
-                        input = pygame.get_pressed()
+                        input = pygame.key.get_pressed()
 
                         if input[pygame.K_w]:
                             print("forward")
@@ -67,20 +76,19 @@ class Remote(object):
 
         finally:
             self.connection.close()
-            self.client.close()
+            self.server.close()
+            cv2.destroyAllWindows()
 
     def Play(self):
-        t1 = threading.Thread(target = Remote.Vision)
-        t2 = threading.Thread(target = Remote.KeyboardControl)
+        t1 = threading.Thread(target = self.Vision)
+        t2 = threading.Thread(target = self.Drive)
 
-        t1 = start()
-        t2 = start()
-        t1 = join()
-        t2 = join()
+        t1.start()
+        t2.start()
+        t1.join()
+        t2.join()
 
 
 if __name__ == '__main__':
-    ip = input("connect to: ")
-    port = 1234
-    remote = Remote('ip', port)
+    remote = Remote()
     remote.Play()
