@@ -37,8 +37,8 @@ void receive(int byteCount) {
       analogWrite(IN3, 100);
       analogWrite(IN4, 0);
     }
-    //right
-    else if (x == 3) {
+    //backward
+    else if (x == 2) {
       analogWrite(IN1, 150);
       analogWrite(IN2, 0);
       analogWrite(IN3, 150);
@@ -51,8 +51,8 @@ void receive(int byteCount) {
       analogWrite(IN3, 0);
       analogWrite(IN4, 150);
     }
-    //backward
-    else if (x == 2) {
+    //right
+    else if (x == 3) {
       analogWrite(IN1, 100);
       analogWrite(IN2, 0);
       analogWrite(IN3, 0);
