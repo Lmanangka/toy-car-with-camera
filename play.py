@@ -3,10 +3,9 @@ import pygame
 import threading
 import io
 import struct
+from PIL import Image
 import cv2
 import numpy as np
-import sys
-from PIL import Image
 
 class Remote(object):
     def __init__(self):
