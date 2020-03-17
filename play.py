@@ -1,11 +1,12 @@
+import time
 import socket
-import pygame
-import threading
 import io
+import threading
+import pygame
 import struct
-from PIL import Image
 import cv2
 import numpy as np
+from PIL import Image
 
 class Remote(object):
     def __init__(self):
@@ -65,14 +66,8 @@ class Remote(object):
                             self.com.sendall(str.encode('x'))
                             trig = False
                             break
-
                     elif event.type == pygame.KEYUP:
                         self.com.sendall(str.encode('q'))
-
-        except KeyboardInterrupt:
-            self.com.sendall(str.encode('q'))
-            print("KeyboardInterrupt")
-
         finally:
             self.connection.close()
             self.server.close()
@@ -86,7 +81,6 @@ class Remote(object):
         t2.start()
         t1.join()
         t2.join()
-
 
 if __name__ == '__main__':
     remote = Remote()

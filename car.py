@@ -19,7 +19,7 @@ class Car(object):
     def Vision(self):
         with picamera.PiCamera() as camera:
             camera.rotation = 180
-            camera.resolution = (640, 480)
+            camera.resolution = (320, 240)
             camera.framerate = 15
             time.sleep(2)
 
@@ -31,7 +31,7 @@ class Car(object):
                 self.connection.write(stream.read())
                 stream.seek(0)
                 stream.truncate()
-            self.connection.write(struct.pack('<L', 0))
+            self.connection.write(struct.pack('L', 0))
 
     def Drive(self):
         while True:
@@ -68,7 +68,7 @@ class Car(object):
         t2.join()
 
 if __name__ == '__main__':
-    ip = input("coneect to server: ")
+    ip = input("connect to player: ")
     port = 1234
     car = Car(ip, port)
     car.Run()
