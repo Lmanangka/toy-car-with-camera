@@ -54,7 +54,7 @@ Arduino Nano ------> Driver Motor
 ### Jumper from Raspberry Pi GPIO to Driver Motor
 
 here is the link for [Raspberry Pi GPIO](https://pinout.xyz/#) or type this in Raspberry Pi terminal
-```shell 
+```shell
 pinout
 ```
 
@@ -67,8 +67,18 @@ Rpi GPIO ------------> Driver Motor
 
 ## How To Use It
 
-1. Run > play.py > from Laptop/PC
-2. Run > car.py > (using Arduino) or > car-without-arduino.py > (without Arduino) from Raspberry Pi Terminal
+1. Run this code from laptop/PC
+```shell
+play.py
+```
+2. Run this code if using Arduino
+```shell
+car.py
+```
+or run this code without Arduino
+```shell
+car-without-arduino.py
+```
 3. From Raspberry Pi terminal connect to Laptop/PC using IP address
 
 ## Author:
