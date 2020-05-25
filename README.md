@@ -2,7 +2,7 @@
 
 Toy car with Picamera and Raspberry pi using python
 <p align="center">
-<img src="https://github.com/Lmanangka/toy-car-with-camera/tree/master/img/Rpi-car.jpg">
+<img src="https://github.com/Lmanangka/toy-car-with-camera/img/Rpi-car.jpg">
 </p>
 
 <p align="center">
