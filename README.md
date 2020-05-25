@@ -1,13 +1,10 @@
 # Toy Car with Camera
 
 Toy car with Picamera and Raspberry pi using python
-<p align="center">
-<img src="https://github.com/Lmanangka/toy-car-with-camera/img/Rpi-car.jpg">
-</p>
 
-<p align="center">
-<img src="https://github.com/Lmanangka/toy-car-with-camera/tree/master/img/Rpi-car-Driver-Motor.jpg">
-</p>
+![Image of Raspberry Pi car](https://github.com/Lmanangka/toy-car-with-camera/blob/master/img/Rpi-car.jpg?raw=true)
+
+![Image of Raspberry Pi car driver motor](https://github.com/Lmanangka/toy-car-with-camera/blob/master/img/Rpi-car-Driver-Motor.jpg?raw=true)
 
 ## Requirement
 
@@ -33,9 +30,7 @@ Check this [Pygame installation](https://www.pygame.org/wiki/GettingStarted) if 
 
 ## Block Diagram with Arduino
 
-<p align="center">
-<img src="https://github.com/Lmanangka/toy-car-with-camera/tree/master/img/Rpi-car-with-arduino.png">
-</p>
+![Image of block diagram with Arduino](https://github.com/Lmanangka/toy-car-with-camera/blob/master/img/Rpi-car-with-arduino.png?raw=true)
 
 ### Jumper from Arduino Nano to Driver Motor
 
@@ -52,9 +47,7 @@ Arduino Nano ------> Driver Motor
 
 ## Block Diagram without Arduino
 
-<p align="center">
-<img src="https://github.com/Lmanangka/toy-car-with-camera/tree/master/img/Rpi-car-without-arduino.png">
-</p>
+![Image of block diagram without Arduino](https://github.com/Lmanangka/toy-car-with-camera/blob/master/img/Rpi-car-without-arduino.png?raw=true)
 
 ### Jumper from Raspberry Pi GPIO to Driver Motor
 
