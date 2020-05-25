@@ -20,10 +20,10 @@ Toy car with Picamera and Raspberry pi using python
 ## Install Pygame
 
 for python 3.7
-> python3 -m pip install -U pygame --user >
+> python3 -m pip install -U pygame --user
 
 for python 3.8
-> python3 -m pip install -U pygame==2.0.0.dev6 --user >
+> python3 -m pip install -U pygame==2.0.0.dev6 --user
 
 Check this [Pygame installation](https://www.pygame.org/wiki/GettingStarted) if having troubles
 
