@@ -54,9 +54,9 @@ Arduino Nano ------> Driver Motor
 ### Jumper from Raspberry Pi GPIO to Driver Motor
 
 here is the link for [Raspberry Pi GPIO](https://pinout.xyz/#) or type this in Raspberry Pi terminal
-'''shell
+```shell 
 pinout
-'''
+```
 
 Rpi GPIO ------------> Driver Motor
 * GPI0 --------------> IN1
