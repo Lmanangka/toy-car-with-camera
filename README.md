@@ -87,6 +87,6 @@ car-without-arduino.py
 
 ## Acknowledgements:
 
-* Raspberry Pi Picamera streaming data over wifi [reference](https://github.com/hamuchiwa/AutoRCCar)
+* Raspberry Pi Picamera [streaming data over wifi](https://github.com/hamuchiwa/AutoRCCar) reference or visit [Picamera documentation](https://picamera.readthedocs.io/en/release-1.13/) web page
 
-* Sending data and receiving data [reference](https://www.youtube.com/watch?v=Lbfe3-v7yE0)
+* Sending data and receiving data [using socket](https://www.youtube.com/watch?v=Lbfe3-v7yE0) reference or visit [socket documentation](https://docs.python.org/3/library/socket.html)
