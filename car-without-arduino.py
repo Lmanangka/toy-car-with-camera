@@ -20,6 +20,7 @@ class Car(object):
         with picamera.PiCamera() as camera:
             camera.rotation = 180
             camera.resolution = (320, 240)
+            # camera.resolution = (320, 120)
             camera.framerate = 15
             time.sleep(2)
 

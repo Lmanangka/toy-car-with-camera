@@ -32,6 +32,7 @@ class Remote(object):
             image = Image.open(stream)
 
             vid = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
+            # vid = cv2.cvtColor(np.array(image), cv2.COLOR_BGR2GRAY)
             cv2.imshow('eye', vid)
 
             if cv2.waitKey(1) & 0xFF == ord('x'):
