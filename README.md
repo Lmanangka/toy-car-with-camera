@@ -6,7 +6,7 @@ Toy car with Picamera and Raspberry pi using python
 
 ![Image of Raspberry Pi car driver motor](https://github.com/Lmanangka/toy-car-with-camera/blob/master/img/Rpi-car-Driver-Motor.jpg?raw=true)
 
-## Requirement
+## Requirements
 
 * Raspberry Pi
 * Picamera
