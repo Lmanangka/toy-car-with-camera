@@ -32,7 +32,7 @@ Check this [Pygame installation](https://www.pygame.org/wiki/GettingStarted) if 
 
 ## Block Diagram with Arduino
 
-![Image of block diagram with Arduino](https://github.com/Lmanangka/toy-car-with-camera/blob/master/img/Rpi-car-with-arduino.png?raw=true)
+![Image of block diagram with Arduino](https://github.com/Lmanangka/toy-car-with-camera/blob/master/img/Rpi-car-with-arduino.jpg?raw=true)
 
 ### Jumper from Arduino Nano to Driver Motor
 
@@ -49,7 +49,7 @@ Arduino Nano ------> Driver Motor
 
 ## Block Diagram without Arduino
 
-![Image of block diagram without Arduino](https://github.com/Lmanangka/toy-car-with-camera/blob/master/img/Rpi-car-without-arduino.png?raw=true)
+![Image of block diagram without Arduino](https://github.com/Lmanangka/toy-car-with-camera/blob/master/img/Rpi-car-without-arduino.jpg?raw=true)
 
 ### Jumper from Raspberry Pi GPIO to Driver Motor
 
